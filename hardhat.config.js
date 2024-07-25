@@ -1,4 +1,5 @@
 require("@nomicfoundation/hardhat-toolbox");
+// require("@nomiclabs/hardhat-etherscan");
 require("@openzeppelin/hardhat-upgrades");
 require("dotenv").config();
 
@@ -10,5 +11,8 @@ module.exports = {
       url: process.env.ALCHEMY_SEPOLIA_URL,
       accounts: [process.env.SEPOLIA_PRIVATE_KEY],
     },
+  },
+  etherscan: {
+    apiKey: process.env.ETHERSCAN_KEY,
   },
 };
